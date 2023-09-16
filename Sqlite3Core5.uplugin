@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Sqlite3Core5",
+	"Description": "SQLite3 core functions for UE5",
+	"Category": "Database",
+	"CreatedBy": "Station 437",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.2.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "Sqlite3Core5",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
