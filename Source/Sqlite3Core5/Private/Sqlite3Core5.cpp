@@ -33,11 +33,12 @@ void FSqlite3Core5Module::StartupModule()
 	FString LibraryPath;
 
 #if PLATFORM_WINDOWS
-    LibraryPath = FPaths::Combine(*BaseDir, TEXT("Sqlite3Native/lib/win64/sqlite3.dll"));
+    //LibraryPath = FPaths::Combine(*BaseDir, TEXT("Resources/Extern/lib/win64/sqlite3.dll"));
+    LibraryPath = FPaths::Combine(*BaseDir, TEXT("Resources"), TEXT("Extern"), TEXT("lib"), TEXT("win64"), TEXT("sqlite3.dll"));
 #elif PLATFORM_MAC
     //LibraryPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/Sqlite3Core5Library/Mac/Release/libExampleLibrary.dylib"));
 #elif PLATFORM_LINUX
-    LibraryPath = FPaths::Combine( *BaseDir, TEXT( "Sqlite3Native" ), TEXT( "lib" ), TEXT( "linux" ), TEXT( "sqlite3.so" ) );
+    LibraryPath = FPaths::Combine(*BaseDir, TEXT("Resources"), TEXT("Extern"), TEXT("lib"), TEXT("linux"), TEXT("sqlite3.so"));
 #endif // PLATFORM_WINDOWS
 
 #if UE_SERVER || UE_EDITOR
