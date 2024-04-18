@@ -50,6 +50,13 @@ class SQLITE3CORE5_API USqlite3Core5Functions : public UBlueprintFunctionLibrary
         UPARAM(DisplayName = "Rows") TArray<UObject*>& OutObjects
     );
 
+	UFUNCTION(BlueprintCallable, Category = "Sqlite3Core5|Common")
+	static void RunSelectQuery(
+		FString DbFullname,
+		FSqliteSelectQuery SelectQuery,
+		UPARAM(DisplayName = "SqliteGenericRows") TArray<FSqliteGenericRow>& GenericResult);
+
+
     UFUNCTION(BlueprintCallable, Category = "Sqlite3Core5|Common")
 	static void RunInsertQuery(
 		FString DbFullname,

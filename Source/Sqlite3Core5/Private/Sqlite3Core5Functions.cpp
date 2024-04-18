@@ -60,6 +60,14 @@ void USqlite3Core5Functions::RunCustomQuery(
     }
 }
 
+void USqlite3Core5Functions::RunSelectQuery(
+	FString DbFullname,
+	FSqliteSelectQuery SelectQuery,
+	TArray<FSqliteGenericRow>& GenericResult)
+{
+	RunCustomQueryGeneric(DbFullname, FormSelectQuery(SelectQuery), GenericResult);
+}
+
 void USqlite3Core5Functions::RunInsertQuery(
     FString DbFullname,
     FSqliteInsertQuery InsertQuery,
